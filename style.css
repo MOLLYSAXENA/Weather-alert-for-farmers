@@ -1,0 +1,313 @@
+/* Basic Reset */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+
+    background-color: #2d5a27; /* Matching the deep green from the paragraph section */
+    padding: 15px 5%;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    width: 100%;
+}
+
+.heading {
+    flex-grow: 1; /* Pushes the 'side' divs to the far right */
+}
+
+.heading p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.side {
+    margin-left: 25px; /* Spaces out the links */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.side:hover {
+    color: #a8e063; /* Light green hover effect */
+    text-decoration: underline;
+}
+
+.img {
+    height: 400px;
+    width: 100%;
+    
+    /* Order: URL | Repeat | Position / Size | Attachment */
+    background: url('https://www.agricolus.com/wp-content/uploads/2022/01/Meteo-campo-agricolo.jpg') repeat center / cover ;
+}
+   
+/* Container for the whole section */
+.agri-weather-section {
+    background-color: rgba(136, 220, 220,10);
+    padding: 60px 0px 10px 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fbf9; /* Light natural background */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Flexbox layout for side-by-side view */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    border: #444;
+    gap: 20px; /* Space between text and image */
+    flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+/* Text styling */
+.text-content {
+    flex: 1; /* Takes up equal space */
+    min-width: 300px;
+}
+
+.text-content h2 {
+    color: #2d5a27; /* Deep leaf green */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Image styling */
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 5px 5px 20px grey;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Softens the corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds depth */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stacks image under text */
+        text-align: center;
+    }
+}
+footer {
+    background-color: #1b3a1a; /* Darker forest green */
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Ensures it looks good on tablets */
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #a8e063; /* Light green accent */
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #a8e063;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    color: #cbd5e0;
+    font-size: 0.95rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2d5a27;
+    font-size: 0.85rem;
+    color: #8892b0;
+}
+.section-header {
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h3 {
+    font-size: 2rem;
+    color: #1a3c34;
+}
+
+.features-grid {
+    padding: 10px 30px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.feature-card {
+
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 5px 4px 10px grey;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 5px 20px rgb(51, 51, 51);
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Stats Row */
+.stats-row {
+    border: 10px;
+    display: flex;
+    justify-content: space-around;
+    background: #062e25;
+    color: white;
+    padding: 50px;
+    border-radius: 20%;
+    margin-bottom: 80px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 60px 20px;
+}
+
+.stat .number {
+    font-size: 3rem;
+    font-weight: 800;
+    display: block;
+    color: #4CAF50;
+}
+
+/* Testimonials */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+blockquote {
+    background: #f1f3f5;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 6px solid #4CAF50;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+cite {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #555;
+    font-style: normal;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+.bt {
+    width: 600px;
+    background-color: #092b0a; /* Green background */
+    color: white;              /* White font color */
+    padding:4px 100px;        /* Spacing inside the button */
+    border: none;              /* Removes default border */
+    border-radius: 8px;        /* Rounded corners */
+    font-size: 16px;           /* Text size */
+    font-weight: 600;          /* Bold text */
+    cursor: pointer;           /* Changes mouse to a hand icon */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hover effect to make it feel interactive */
+.bt:hover {
+    background-color: #061206; /* Slightly darker green */
+    transform: translateY(-2px); /* Lifts the button slightly */
+}
+
+/* Active effect when clicked */
+.bt:active {
+    transform: translateY(0);
+}
+a {
+    text-decoration: none !important; /* Removes the underline */
+    color: inherit;                  /* Makes the link the same color as the surrounding text */
+}
+
+
+
+  
+
